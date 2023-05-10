@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid lightgray;
+}
+
+.title__name {
+  font-size: 35px;
+}
+
+header img {
+  width: 35px;
+  border-radius: 50%;
+  /*
+  원만들기!
+  */
+  transition: transform 0.5s ease-in-out;
+}
+
+header img:hover {
+  animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header ul {
+  display: flex;
+  margin-left: auto;
+  /*
+  가능한 왼쪽으로 정렬시켜줌.
+  */
+  text-align: center;
+}
+
+header ul li {
+  padding: 20px;
+  transition: color 0.7s ease-in-out;
+}
+
+header ul li:hover {
+  color: tomato;
+}
