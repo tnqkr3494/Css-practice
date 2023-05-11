@@ -1,0 +1,60 @@
+.box {
+  display: flex;
+  margin: 20px;
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  display: flex;
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.boxes__position {
+  position: relative;
+  border-bottom: 1.5px solid black;
+}
+
+.box__check {
+  background-color: blueviolet;
+  left: 20px;
+  top: 75px;
+  position: absolute;
+}
+
+.boxes__flex {
+  display: flex;
+  flex-flow: row nowrap;
+  /* flex-flow: flex-direction flex-wrap  */
+  margin: 20px 0px;
+}
+
+.box2__1 {
+  background-color: red;
+  flex: 2 2 auto;
+  /* flex : grow shrink basis */
+}
+
+.box2__2 {
+  background-color: yellow;
+}
+
+.box2__3 {
+  background-color: pink;
+}
+
+.box2__4 {
+  background-color: green;
+}
+
+.box2__5 {
+  background-color: purple;
+}
