@@ -1,0 +1,45 @@
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "a a a"
+    "b c c"
+    "b d g"
+    "e f g";
+}
+
+.img1 {
+  grid-area: a;
+}
+
+.img2 {
+  grid-area: b;
+}
+
+.img3 {
+  grid-area: c;
+}
+
+.img4 {
+  grid-area: d;
+}
+
+.img5 {
+  grid-area: e;
+}
+
+.img6 {
+  grid-area: f;
+}
+
+.img7 {
+  grid-area: g;
+}
