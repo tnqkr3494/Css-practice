@@ -10,7 +10,6 @@
 
 .box2 {
   display: flex;
-  background-color: aliceblue;
   width: 100px;
   height: 100px;
   justify-content: center;
