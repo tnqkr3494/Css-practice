@@ -1,0 +1,12 @@
+/*
+스크롤바 조절하기!! 
+윈도우/Chrome/Edge 등 WebKit 계열 브라우저 
+*/
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999; /* 스크롤바 색상 */
+  border-radius: 4px; /* 스크롤바 모서리의 둥근 정도 */
+}

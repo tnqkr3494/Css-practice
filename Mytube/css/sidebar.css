@@ -1,0 +1,47 @@
+.sideBar {
+  width: 18%;
+  margin: 0 20px;
+  height: 80vh;
+  position: sticky;
+  top: 90px;
+  overscroll-behavior: none;
+  overflow-y: auto;
+}
+
+.sideBar__menu {
+  border-bottom: 1px solid grey;
+}
+
+.sideBar__menu div {
+  padding: 20px 0;
+  font-size: 1.1em;
+}
+
+.sideBar__menu i {
+  margin-right: 10px;
+}
+
+.sideBar__subscribe {
+  padding: 20px 0;
+}
+
+.id {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.id span {
+  margin-left: 20px;
+}
+
+/* 사이드바 아이콘과 글자때문에 설정해줌 */
+
+@media screen and (max-width: 1500px) {
+  .sideBar {
+    display: none;
+  }
+  .grid__videos {
+    margin-left: 20px;
+  }
+}
