@@ -7,7 +7,38 @@ let images = [
 ];
 
 const image = document.querySelector(".images img");
+const thumbnails = document.querySelector(".thumbnails");
+
+let cnt = 0;
+
+function moreImg() {
+  thumbnails.innerHTML = images
+    .map((image) => {
+      return `<image src="${image}"/>`;
+    })
+    .join("");
+
+  const thumbnailImg = document.querySelectorAll(".thumbnails img");
+
+  for (let i = 0; i < thumbnailImg.length; i++) {
+    thumbnailImg[i].addEventListener("click", () => {
+      cnt = i;
+      image.src = images[cnt];
+    });
+  }
+}
+
+moreImg();
 
 document.querySelector("#front-btn").addEventListener("click", () => {
-  image.src = images[1];
+  cnt = (cnt + 1) % images.length;
+  image.src = images[cnt];
+});
+
+document.querySelector("#back-btn").addEventListener("click", () => {
+  cnt--;
+  if (cnt < 0) {
+    cnt = images.length - 1;
+  }
+  image.src = images[cnt];
 });
