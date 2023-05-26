@@ -382,6 +382,88 @@ section {
   color: #fff;
 }
 
+.contact {
+  background: url(img/contact-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contact form {
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  max-width: 70rem;
+  padding: 2rem;
+}
+
+.contact form h3 {
+  color: var(--black);
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.contact form .inputBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea {
+  width: 100%;
+  background: #eee;
+  padding: 1rem;
+  margin: 0.7rem 0;
+  border-radius: 0.5rem;
+  color: var(--black);
+  font-size: 1.7rem;
+}
+
+.contact form .inputBox input {
+  width: 49%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .credit {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.footer .credit span {
+  color: var(--orange);
+}
+
+.footer .follow {
+  padding: 1rem 0;
+}
+
+.footer .follow a {
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  background: var(--black);
+  color: #fff;
+  margin: 0 0.1rem;
+  text-align: center;
+}
+
+.footer .follow a:hover {
+  background: var(--orange);
+}
+
 /* media queries */
 
 @media (max-width: 991px) {
@@ -446,10 +528,17 @@ section {
   .container .posts-container .post .image {
     height: 30rem;
   }
+
+  .footer {
+    flex-flow: column;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .contact form .inputBox input {
+    width: 100%;
   }
 }
