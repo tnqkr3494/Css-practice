@@ -273,12 +273,12 @@ section {
   color: var(--black);
 }
 
-.vehicle .heading span {
+.heading span {
   position: relative;
   z-index: 0;
 }
 
-.vehicle .heading span::before {
+.heading span::before {
   content: " ";
   position: absolute;
   bottom: 1rem;
@@ -332,7 +332,7 @@ section {
 
 .vehicle .slider .activeCircle .fa-circle {
   color: var(--yellow);
-  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .vehicle .slider .activeCircle .fa-solid {
@@ -361,10 +361,14 @@ section {
   display: none;
 }
 
+.vehicle .slider .wrapper .wrapper-box .box .content i {
+  color: var(--yellow);
+}
+
 .vehicle .slider .wrapper .wrapper-box .box.active {
   width: 100%;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
 .vehicle .slider .wrapper .wrapper-box .box.active img {
@@ -376,6 +380,138 @@ section {
   width: 100%;
   display: block;
   font-size: 2rem;
+}
+
+/* service section */
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services .box-container .boxb {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.services .box-container .boxb i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  color: var(--black);
+  background: var(--yellow);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.services .box-container.boxb h3 {
+  color: var(--black);
+  font-size: 2.2rem;
+}
+
+.services .box-container .boxb p {
+  color: var(--light-color);
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.services .box-container .boxb:hover {
+  background: var(--black);
+}
+
+.services .box-container .boxb:hover h3 {
+  color: #fff;
+}
+
+.services .box-container .boxb:hover p {
+  color: #fff;
+}
+
+/* feature section */
+
+.featured-slider .featured-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.featured-slider .featured-wrapper .fpreNext {
+  cursor: pointer;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 15.5%;
+  height: 100%;
+  color: var(--black);
+  z-index: 1;
+  width: 10%;
+}
+
+.featured-slider .featured-wrapper .fpreNext#fPreBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.featured-slider .featured-wrapper .fpreNext#fNextBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.featured-slider .fActCircle {
+  text-align: center;
+  color: var(--yellow);
+}
+
+.featured-slider .featured-wrapper .featured-wrapper2 {
+  width: 62vw;
+  overflow-x: hidden;
+  margin-left: 10vw;
+}
+
+.featured-slider .featured-wrapper .featured-wrapper-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.featured-slider .featured-wrapper .featured-wrapper-box .boxf {
+  text-align: center;
+  border: var(--border);
+  padding: 2.6rem;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.boxf img {
+  width: 17vw;
+}
+
+.boxf:hover img {
+  transform: scale(0.9);
+}
+
+.boxf h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+}
+
+.boxf .stars {
+  padding: 1rem 0;
+}
+
+.boxf .stars i {
+  font-size: 1.7rem;
+  color: var(--yellow);
+}
+
+.boxf .price {
+  font-size: 2.5rem;
+  color: var(--black);
 }
 
 /* media query */
@@ -443,6 +579,47 @@ section {
   .vehicle .slider .wrapper .preNext#preBtn {
     width: 20vw;
   }
+  .vehicle .slider .wrapper .wrapper-box .box.active {
+    width: 100%;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .services .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+
+  .featured-slider .featured-wrapper .fPreNext {
+    padding-top: 30%;
+  }
+
+  .featured-slider .featured-wrapper .featured-wrapper2 {
+    width: 100%;
+    margin: auto;
+  }
+
+  .featured-slider
+    .featured-wrapper
+    .featured-wrapper2
+    .featured-wrapper-box
+    .boxf {
+    display: none;
+  }
+  .featured-slider
+    .featured-wrapper
+    .featured-wrapper2
+    .featured-wrapper-box
+    .boxf.active {
+    display: block;
+  }
+  .featured-slider
+    .featured-wrapper
+    .featured-wrapper2
+    .featured-wrapper-box
+    .boxf.active
+    img {
+    width: 65vw;
+  }
 }
 
 @media (max-width: 450px) {
@@ -453,7 +630,6 @@ section {
   .vehicle .slider .wrapper .wrapper-box .box.active {
     display: block;
     margin-left: -10%;
-    margin-right: auto;
   }
   .vehicle .slider .wrapper .wrapper-box .box.active img {
     transform: scale(1);
@@ -465,5 +641,8 @@ section {
   .vehicle .slider .wrapper .preNext#preBtn {
     width: 15vw;
     padding-top: 17%;
+  }
+  .featured-slider .featured-wrapper .fpreNext {
+    padding-top: 40%;
   }
 }
